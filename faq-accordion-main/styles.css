@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f9f0ff;
+}
+
+main {
+    font-family: Work Sans, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+}   
+
+.accordion {
+    width: 90%;
+    max-width: 630px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 30px;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    cursor: pointer;
+}
+
+.accordion-header h3 {
+    max-width: 500px;
+}
+
+.accordion-header h3:hover {
+    color: #e522ff;
+}
+
+.accordion-toggle {
+    color: #fff;
+    border: none;
+    width: 27px;
+    font-size: 1.5em;
+    cursor: pointer;
+    background-color: #e522ff;
+    border-radius: 50%;
+}
+
+.accordion-content {
+    display: none;
+    padding: 1em;
+    border-top: 1px solid #e0e0e0;
+}
+
+.attribution {
+    text-align: center;
+}
+
+.accordion-title {
+    display: flex;
+    font-size: 1.9em;
+    align-items: center;
+}
+
+.responsive-svg {
+    width: 100%;
+    z-index: -1;
+    position: fixed;
+}
+
+@media (max-width: 768px) {
+    .accordion {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .accordion-header h3 {
+        max-width: 525px;
+    }
+
+    .responsive-svg {
+        height: 40%;
+        width: auto;
+    }
+}
+
+
+@media (max-width: 375px) {
+    .accordion {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .accordion-title {
+        font-size: 1.6em;
+    }
+
+    .accordion-header h3 {
+        font-size: 0.9em;
+        max-width: 255px;
+    }
+
+    .accordion-header button {
+        width: 20px;
+    }
+
+    .accordion-toggle {
+        font-size: 1.2em;
+    }
+}
